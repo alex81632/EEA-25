@@ -1,6 +1,7 @@
 filename = blink
 pcf_file = io.pcf
 
+# ICELINK_DIR = $(shell df | grep iCELink | awk '{print $$6}')
 ICELINK_DIR=/mnt/e
 ${warning iCELink path: $(ICELINK_DIR)}
 
