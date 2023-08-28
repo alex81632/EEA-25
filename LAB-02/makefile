@@ -1,9 +1,5 @@
-filename = full_adder_tb
+filename = full_adder
 pcf_file = full_adder.pcf
-
-# ICELINK_DIR = $(shell df | grep iCELink | awk '{print $$6}')
-ICELINK_DIR=/mnt/e
-${warning iCELink path: $(ICELINK_DIR)}
 
 build:
 	yosys -p "synth_ice40 -json $(filename).json -blif $(filename).blif" $(filename).v
@@ -13,13 +9,7 @@ build:
 	icepack $(filename).asc $(filename).bin
 
 prog:
-	@if [ -d '$(ICELINK_DIR)' ]; \
-	then \
-		sudo ./icesugar/tools/icesprog.x64.linux $(filename).bin \
-	else \
-		echo "iCELink not found"; \
-		exit 1; \
-	fi
-
+	sudo ./icesugar/tools/icesprog.x64.linux $(filename).bin
+	
 clean:
 	rm -rf *.bin *.asc *.blif *.json
