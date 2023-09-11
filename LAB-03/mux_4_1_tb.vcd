@@ -1,0 +1,70 @@
+$date
+	Tue Aug 29 09:34:32 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mux_4_1_tb $end
+$var wire 1 ! Y $end
+$var reg 1 " EN $end
+$var reg 4 # IN [3:0] $end
+$var reg 2 $ S [1:0] $end
+$scope module uut $end
+$var wire 1 % EN $end
+$var wire 4 & IN [3:0] $end
+$var wire 2 ' sel [1:0] $end
+$var reg 1 ! e $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 '
+b0 &
+z%
+b0 $
+b0 #
+1"
+0!
+$end
+#10000
+b1 $
+b1 '
+#20000
+b10 $
+b10 '
+#30000
+b11 $
+b11 '
+#40000
+1!
+b0 $
+b0 '
+b1111 #
+b1111 &
+#50000
+b1 $
+b1 '
+#60000
+b10 $
+b10 '
+#70000
+b11 $
+b11 '
+#80000
+0!
+b0 $
+b0 '
+b0 #
+b0 &
+0"
+#90000
+1!
+b11 $
+b11 '
+b1111 #
+b1111 &
+#100000
